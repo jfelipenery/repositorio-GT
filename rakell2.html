@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakell Queiroz - Lash Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .fixed-name {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+        .fixed-name.hidden {
+            transform: translateY(-100%);
+        }
+        .gallery-item {
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .wine-gradient {
+            background: linear-gradient(135deg, #722f37 0%, #5a1a22 100%);
+        }
+        .wine-bg {
+            background-color: #5a1a22;
+        }
+        .wine-text {
+            color: #5a1a22;
+        }
+        .wine-light {
+            background-color: #f8f1f2;
+        }
+    </style>
+</head>
+<body class="wine-light min-h-screen">
+    <!-- Fixed Name Header -->
+    <div id="fixedName" class="fixed-name wine-gradient py-4 shadow-md">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl md:text-4xl font-bold text-white text-center">Rakell Queiroz</h1>
+            <p class="text-white text-center text-sm md:text-base">Lash Designer Profissional</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed bottom-0 md:top-0 md:bottom-auto w-full bg-white shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-around md:justify-center md:space-x-12 py-3">
+                <a href="#home" class="flex flex-col items-center wine-text hover:text-red-900 transition">
+                    <i class="fas fa-home text-xl"></i>
+                    <span class="text-xs md:text-sm mt-1">Início</span>
+                </a>
+                <a href="#services" class="flex flex-col items-center wine-text hover:text-red-900 transition">
+                    <i class="fas fa-spa text-xl"></i>
+                    <span class="text-xs md:text-sm mt-1">Serviços</span>
+                </a>
+                <a href="#gallery" class="flex flex-col items-center wine-text hover:text-red-900 transition">
+                    <i class="fas fa-images text-xl"></i>
+                    <span class="text-xs md:text-sm mt-1">Galeria</span>
+                </a>
+                <a href="#contact" class="flex flex-col items-center wine-text hover:text-red-900 transition">
+                    <i class="fas fa-phone-alt text-xl"></i>
+                    <span class="text-xs md:text-sm mt-1">Contato</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 px-4 wine-gradient">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Realce sua beleza natural</h2>
+                <p class="text-white text-lg md:text-xl mb-6">Transforme seu olhar com extensões de cílios feitas sob medida para você.</p>
+                <a href="#contact" class="bg-white wine-text font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300 inline-block">
+                    Agende seu horário
+                </a>
+            </div>
+            <div class="md:w-1/2">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Rakell Queiroz - Lash Designer" 
+                         class="w-full h-auto rounded-2xl">
+                    <div class="absolute inset-0 bg-red-900 opacity-20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center wine-text mb-12">Nossos Serviços</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-50 rounded-xl p-6 shadow-md border border-gray-200">
+                    <div class="wine-text text-4xl mb-4">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-red-900 mb-3">Extensão de Cílios</h3>
+                    <p class="text-gray-700">Cílios fio a fio personalizados para realçar seu olhar naturalmente.</p>
+                    <div class="mt-4 wine-text font-bold">A partir de R$ 150</div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-50 rounded-xl p-6 shadow-md border border-gray-200">
+                    <div class="wine-text text-4xl mb-4">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-red-900 mb-3">Design de Sobrancelhas</h3>
+                    <p class="text-gray-700">Modelagem perfeita para valorizar sua expressão facial.</p>
+                    <div class="mt-4 wine-text font-bold">A partir de R$ 80</div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-50 rounded-xl p-6 shadow-md border border-gray-200">
+                    <div class="wine-text text-4xl mb-4">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-red-900 mb-3">Manutenção</h3>
+                    <p class="text-gray-700">Manutenção periódica para manter seus cílios sempre perfeitos.</p>
+                    <div class="mt-4 wine-text font-bold">A partir de R$ 100</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 px-4 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center wine-text mb-12">Galeria de Trabalhos</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Photo 1 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Trabalho de extensão de cílios" 
+                         class="w-full h-64 object-cover">
+                    <div class="bg-white p-4">
+                        <h3 class="font-bold text-red-900">Extensão Volume Brasileiro</h3>
+                    </div>
+                </div>
+                
+                <!-- Photo 2 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Trabalho de extensão de cílios" 
+                         class="w-full h-64 object-cover">
+                    <div class="bg-white p-4">
+                        <h3 class="font-bold text-red-900">Extensão Fio a Fio</h3>
+                    </div>
+                </div>
+                
+                <!-- Photo 3 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1599351430140-c70f0250bd70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Trabalho de extensão de cílios" 
+                         class="w-full h-64 object-cover">
+                    <div class="bg-white p-4">
+                        <h3 class="font-bold text-red-900">Design de Sobrancelhas</h3>
+                    </div>
+                </div>
+                
+                <!-- Photo 4 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Trabalho de extensão de cílios" 
+                         class="w-full h-64 object-cover">
+                    <div class="bg-white p-4">
+                        <h3 class="font-bold text-red-900">Extensão Volume Russo</h3>
+                    </div>
+                </div>
+                
+                <!-- Photo 5 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Trabalho de extensão de cílios" 
+                         class="w-full h-64 object-cover">
+                    <div class="bg-white p-4">
+                        <h3 class="font-bold text-red-900">Manutenção de Cílios</h3>
+                    </div>
+                </div>
+                
+                <!-- Photo 6 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Rakell Queiroz trabalhando" 
+                         class="w-full h-64 object-cover">
+                    <div class="bg-white p-4">
+                        <h3 class="font-bold text-red-900">Atendimento Personalizado</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/3 mb-8 md:mb-0">
+                <div class="relative rounded-full overflow-hidden shadow-xl w-64 h-64 mx-auto">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Rakell Queiroz" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-red-900 opacity-20"></div>
+                </div>
+            </div>
+            <div class="md:w-2/3 md:pl-12">
+                <h2 class="text-3xl md:text-4xl font-bold wine-text mb-6">Sobre Rakell Queiroz</h2>
+                <p class="text-gray-700 mb-4 text-lg">
+                    Com mais de 5 anos de experiência no mercado de beleza, Rakell Queiroz é especialista em extensão de cílios e design de sobrancelhas. Formada pelas melhores escolas do país, sua técnica refinada e atenção aos detalhes garantem resultados naturais e encantadores.
+                </p>
+                <p class="text-gray-700 text-lg">
+                    Meu objetivo é realçar sua beleza natural, proporcionando um olhar marcante e elegante que combina perfeitamente com suas características faciais.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 wine-gradient">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Entre em Contato</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold wine-text mb-6">Agende seu horário</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 mb-2">Nome</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-800">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-800">
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 mb-2">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-800">
+                        </div>
+                        <div class="mb-4">
+                            <label for="service" class="block text-gray-700 mb-2">Serviço desejado</label>
+                            <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-800">
+                                <option value="">Selecione um serviço</option>
+                                <option value="extensao">Extensão de Cílios</option>
+                                <option value="design">Design de Sobrancelhas</option>
+                                <option value="manutencao">Manutenção</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full wine-gradient text-white font-bold py-3 px-6 rounded-lg hover:bg-red-900 transition duration-300">
+                            Enviar Agendamento
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="text-white">
+                    <h3 class="text-2xl font-bold mb-6">Informações de Contato</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Endereço</h4>
+                                <p>Rua das Belezas, 123 - Centro</p>
+                                <p>São Paulo - SP</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Telefone</h4>
+                                <p>(11) 98765-4321</p>
+                                <p>(11) 1234-5678</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Email</h4>
+                                <p>contato@rakellqueiroz.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-2xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Horário de Atendimento</h4>
+                                <p>Segunda a Sexta: 9h às 19h</p>
+                                <p>Sábado: 9h às 15h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-lg mb-4">Redes Sociais</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-white wine-text w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-white wine-text w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-white wine-text w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="wine-bg text-white py-8 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold">Rakell Queiroz</h3>
+                    <p>Lash Designer Profissional</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p>&copy; 2023 Rakell Queiroz. Todos os direitos reservados.</p>
+                    <p class="text-red-300 mt-1">Desenvolvido com amor e cuidado</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Fixed name header behavior
+        let lastScroll = 0;
+        const fixedName = document.getElementById('fixedName');
+        
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                fixedName.classList.remove('hidden');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && !fixedName.classList.contains('hidden')) {
+                // Scrolling down
+                fixedName.classList.add('hidden');
+            } else if (currentScroll < lastScroll && fixedName.classList.contains('hidden')) {
+                // Scrolling up
+                fixedName.classList.remove('hidden');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
