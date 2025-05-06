@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Consulta de Clima</h1>
+    <input type="text" id="cidade" placeholder="Digite uma cidade">
+
+    <button onclick="buscarClima()">Buscar</button>
+    <div id="resultado"></div>
+
+    <script>  
+        async function buscarClima() {
+            const cidade = document.getElementById("cidade").value;
+            const resultado = document.getElementById("resultado");
+            const apikey = "b132a15721b84d6f858194714250505";
+
+            try {
+                const resposta = await fetch (`https://api.weatherapi.com/v1/current.json?key=${apikey}&q=${cidade}&lang=pt`);
+
+                if (!resposta.ok) throw new Error("erro na requisição");
+
+                const dados = await resposta.json();
+
+                resultado.innerHTML = `
+                <h2>${dados.location.name}, ${dados.location.region}</h2>
+                <p><strong>Temperatura:</strong> ${dados.current.temp_c}°C</p>
+                <p><strong>Condição:</strong> ${dados.current.condition.text}</p>
+                <img src="${dados.current.condition.icon}" alt="icone do clima"/>`;
+
+                
+            } catch (erro) {
+                resultado.innerHTML = `<p style="color: red;">Erro: ${erro.message}</p>`;
+                console.error(erro);
+              }
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>
