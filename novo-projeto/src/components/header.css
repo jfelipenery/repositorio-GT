@@ -1,0 +1,23 @@
+.header{
+    background-color:lightgreen;
+    color: black;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    
+
+}
+.header nav a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.header nav a:hover{
+    text-decoration: underline;
+}
+

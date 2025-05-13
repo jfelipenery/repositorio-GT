@@ -1,0 +1,32 @@
+.bt1{
+    background-color: blueviolet;
+    color: white;
+    width: 90px;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.bt1:hover{
+    text-shadow: 1svb;
+    text-decoration: dashed;
+    text-decoration: aqua;
+}
+.cabecalho{
+    border: 1px solid lightgray;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -266px;
+    background-color: lightgray;
+}
+.h1 {
+    display: flex;
+    justify-content: center;
+    margin-left: -40px;
+   
+    text-align: center;
+
+}
